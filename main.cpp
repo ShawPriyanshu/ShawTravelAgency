@@ -48,6 +48,14 @@ public:
                 cin>>inputusername;
                cout<<"\nEnter old password:";
                cin>>inputpassword;
+               if(inputpassword.compare(password)!=0)
+               {
+                  cout<<"\nPlease enter correct password!!";
+                  Sleep(1100);
+                  system("CLS");
+                  ManageMenu();
+               }
+               else{
                cout<<"\nEnter New Password:";
                cin>>inputpassword;
 
@@ -57,6 +65,7 @@ public:
                Sleep(1200);
                system("CLS");
                ManageMenu();
+               }
         }
     }
 
@@ -131,7 +140,7 @@ public:
 
         cout << "\nEnter 3 to continue or 4 to go back to MainMenu" << endl;
         cin>>userChoice;
-        system("CLS");
+        
         if(userChoice==3)
         {
         cout << "\nTo calculate the cost for your journey.." << endl;
